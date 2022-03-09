@@ -6,12 +6,12 @@ import java.util.stream.Collectors;
 public class LongestCommon {
     public static void main(String[] args) {
         LongestCommon ob = new LongestCommon();
-        System.out.println(ob.solution("hhhh"));
+        System.out.println(ob.solution("abcabcbb"));
     }
     public int solution(String s){
         int l = 0;
         for (int i=0;i<s.length();i++){
-            for (int j = 0;j<s.length();j++){
+            for (int j = i;j<s.length();j++){
                 String ss = s.substring(i,j+1);
                 if (nonduplicate(ss)){
                     if (ss.length()>l){
